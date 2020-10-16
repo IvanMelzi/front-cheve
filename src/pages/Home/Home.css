@@ -1,6 +1,6 @@
 .Containers {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 800px;
     margin-left: 10%;
     margin-right: 10%;
@@ -19,4 +19,16 @@
 
 .Scroll {
     overflow-y: auto;
+}
+
+.BeerDescription {
+    height: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.CommentsContainer {
+    display: flex;
+    flex-direction: row;
 }

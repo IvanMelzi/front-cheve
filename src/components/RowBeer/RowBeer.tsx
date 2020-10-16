@@ -1,15 +1,21 @@
 import React, { FC } from 'react';
-import { NavLink } from 'react-router-dom';
 
 import './RowBeer.css';
 
 import { Box } from '@material-ui/core';
 
-const RowBeer: FC<any> = () => {
+import { Edit as EditIcon, Delete as DeleteIcon } from '@material-ui/icons'
+
+const RowBeer: FC<any> = ({
+    beer,
+    editComment,
+    deleteComment
+}) => {
     return (
         <Box className="Row">
-            <p>asdasdasdas</p>
-            <p>asdasdasdas</p>
+            <p>{beer.comment}</p>
+            <EditIcon onClick={() => editComment(beer.id)}/>
+            <DeleteIcon onClick={() => deleteComment(beer.id)}/>
         </Box>
     )
 }
