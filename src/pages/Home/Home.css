@@ -1,0 +1,22 @@
+.Containers {
+    display: flex;
+    flex-direction: row;
+    height: 800px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.BeerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-top: 200px;
+    overflow: hidden;
+    height: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Scroll {
+    overflow-y: auto;
+}

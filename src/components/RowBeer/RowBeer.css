@@ -1,0 +1,6 @@
+.Row {
+    background: linear-gradient(330deg,#ee9e4f,#f5d67b);
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+}
