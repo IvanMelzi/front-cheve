@@ -2,15 +2,13 @@ import { Box, Button, TextareaAutosize } from '@material-ui/core'
 import React, { FC, useEffect, useState } from 'react'
 import axios from 'axios'
 
-import RowBeer from '../../components/RowBeer/RowBeer'
-import BeerDescription from '../../components/BeerDescription/BeerDescription'
+import UserCommment from '../../components/UserCommment/UserCommment'
 
 import './Home.css'
 
 const Home: FC = () => {
 
     const [comments, setComments] = useState([]);
-    const [selectedBeer, setSelectedBeer] = useState({});
     const [comment, setComment] = useState('');
 
     useEffect(() => {
@@ -18,10 +16,6 @@ const Home: FC = () => {
             setComments(response.data)
         })
     },[])
-
-    const selectBeer = (beer: any) => {
-        setSelectedBeer(beer)
-    }
 
     const handleComment = () => {
         axios.post('http://localhost:3000/comment', {
@@ -43,15 +37,14 @@ const Home: FC = () => {
 
     return (
         <Box className="Containers">
-            <Box className="BeerContainer">
+            <Box className="CommentContainer">
                 <Box className="Scroll">
                     {comments && comments.map((commentResponse: any) => {
                         return (
                             <Box
-                                key={commentResponse.id}
-                                onClick={() => selectBeer(commentResponse)}>
-                                <RowBeer
-                                    beer={commentResponse}
+                                key={commentResponse.id}>
+                                <UserCommment
+                                    comment={commentResponse}
                                     editComment={editCommentHandler}
                                     deleteComment={deleteCommentHandler}/>
                             </Box>
@@ -59,8 +52,8 @@ const Home: FC = () => {
                     })}
                 </Box>
             </Box>
-            <Box className="BeerContainer">
-                <Box className="BeerDescription">
+            <Box className="CommentContainer">
+                <Box className="CommentDescription">
                     <TextareaAutosize
                         onChange={(e) => {
                             setComment(e.target.value)
