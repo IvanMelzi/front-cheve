@@ -2,15 +2,15 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: front cheve
-  description: The place to be, for great artists
+  description: asdada
   labels:
-    system: public-websites
+    system: dasdasdas
   annotations:
-    example.com/service-discovery: artistweb
-    circleci.com/project-slug: github/example-org/artist-website
+    example.com/service-discovery: dasdsad
+    circleci.com/project-slug: github/example-org/asdada
   tags:
     - java
 spec:
   type: website
   lifecycle: production
-  owner: artist-relations-team
+  owner: asdasdasdas
