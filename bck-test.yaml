@@ -1,16 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: front cheve
-  description: asdada
+  name: front-cheve
+  description: The place to be
   labels:
-    system: dasdasdas
+    system: public-websites
   annotations:
-    example.com/service-discovery: dasdsad
-    circleci.com/project-slug: github/example-org/asdada
+    example.com/service-discovery: frontcheve
+    circleci.com/project-slug: github/example-org/front-cheve
   tags:
-    - java
+    - node
 spec:
   type: website
   lifecycle: production
-  owner: asdasdasdas
+  owner: front-cheve-team
