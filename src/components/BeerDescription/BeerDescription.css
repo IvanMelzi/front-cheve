@@ -1,0 +1,7 @@
+.Description {
+    height: 100%;
+    background: linear-gradient(330deg,#ee9e4f,#f5d67b);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
